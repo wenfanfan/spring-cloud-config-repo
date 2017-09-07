@@ -1,14 +1,4 @@
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8091/eureka/ # 将本应用注册到注册中心里面，这里的地址就是我们在注册中配置的注册中心的地址
-  instance: 
-    hostname: localhost
-server: 
-  port: 8093 #本应用接口
 spring:
-  application:
-    name: service-provider2  #配置本应用的名字，这是很重要的，在服务注册和发现的时候都要用到
   activemq:
     broker-url: tcp://localhost:61616  #activemq的连接url,还可以指定连接的用户名和密码
   devtools:
