@@ -1,0 +1,36 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8091/eureka/ # 将本应用注册到注册中心里面，这里的地址就是我们在注册中配置的注册中心的地址
+  instance: 
+    hostname: localhost
+server: 
+  port: 8092 #本应用接口
+spring:
+  application:
+    name: service-provider  #配置本应用的名字，这是很重要的，在服务注册和发现的时候都要用到
+#datasource数据库连接信息
+datasource: 
+#第一个数据库
+    base: 
+      type: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:mysql://192.168.0.99:3306/basedata?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+      username: root
+      password: 123456
+      connectionTimeout: 3000
+      idleTimeout: 600000
+      maxLifetime: 1800000
+      minimumIdle: 10
+      maximumPoolSize: 50    
+#第二个数据库
+    main: 
+      type: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:mysql://192.168.0.99:3306/db_eshop?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+      username: root
+      password: 123456
+      connectionTimeout: 3000
+      idleTimeout: 600000
+      maxLifetime: 1800000
+      minimumIdle: 10
+      maximumPoolSize: 50
+    
