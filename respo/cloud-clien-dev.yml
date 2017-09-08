@@ -10,7 +10,7 @@ spring:
   #spring mvc的配置,视图解析器
   mvc:
     view:
-      prefix: /WEB-INF/views
+      prefix: /WEB-INF/views/
       suffix: .jsp
   application:
     name: service-provider  #配置本应用的名字，这是很重要的，在服务注册和发现的时候都要用到
