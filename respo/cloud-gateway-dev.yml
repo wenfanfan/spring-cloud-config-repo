@@ -5,7 +5,7 @@ eureka:
   instance: 
     hostname: localhost   
 server:
-  port: 8999
+  port: 9950
 spring:
   application:
     name: cloud-gateway   
