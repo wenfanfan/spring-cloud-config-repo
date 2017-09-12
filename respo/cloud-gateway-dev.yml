@@ -1,0 +1,22 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8091/eureka/
+  instance: 
+    hostname: localhost   
+server:
+  port: 8999
+spring:
+  application:
+    name: cloud-gateway   
+#以/api-a/ 开头的请求都指向service-consumer；以/api-b/开头的请求都指向service-consumer2；
+zuul:
+  routes:
+    api-a:
+      path: /clien/**
+      serviceId: service-provider
+      #url: http://localhost:8092/
+    api-b:
+      path: /clien2/**
+      serviceId: cloud-clien2
+      #url: http://localhost:8093/
