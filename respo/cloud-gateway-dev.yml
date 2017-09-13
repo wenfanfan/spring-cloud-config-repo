@@ -12,11 +12,11 @@ spring:
 #以/api-a/ 开头的请求都指向service-consumer；以/api-b/开头的请求都指向service-consumer2；
 zuul:
   routes:
-    api-a:
-      path: /api-a/**
+    service-provider:
+      path: /service-provider/**
       serviceId: service-provider
       #url: http://localhost:8092/
-    api-b:
-      path: /api-b/**
+    cloud-clien2:
+      path: /cloud-clien2/**
       serviceId: cloud-clien2
       #url: http://localhost:8093/
