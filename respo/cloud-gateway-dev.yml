@@ -13,10 +13,10 @@ spring:
 zuul:
   routes:
     api-a:
-      path: /clien/**
+      path: /api-a/**
       serviceId: service-provider
       #url: http://localhost:8092/
     api-b:
-      path: /clien2/**
+      path: /api-b/**
       serviceId: cloud-clien2
       #url: http://localhost:8093/
