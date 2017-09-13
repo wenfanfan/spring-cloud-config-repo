@@ -28,3 +28,5 @@ datasource:
       maxLifetime: 1800000
       minimumIdle: 10
       maximumPoolSize: 50
+project:
+  name:aaasss
