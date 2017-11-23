@@ -1,0 +1,16 @@
+security:
+  user:
+    password: user  # 直接登录时的密码
+  ignored: /
+  sessions: never   # session策略
+  oauth2:
+    sso:
+      loginPath: /login   # 登录路径
+    client:
+      clientId: fb1d2810d1f6618f9f68    #你的clientId
+      clientSecret: 2b802fcd528e4cfef64f3f2889757c894dffe325    #你的clientSecret
+      accessTokenUri: https://github.com/login/oauth/access_token
+      userAuthorizationUri: https://github.com/login/oauth/authorize
+    resource:
+      userInfoUri: https://api.github.com/user
+      preferTokenInfo: false
