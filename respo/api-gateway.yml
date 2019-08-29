@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: api-gateway
+server:
+  port: 8889
+
+zuul:
+  routes:
+    ribbon:
+      path: /ribbon/**
+      service-id: ribbon-consume
+      strip-prefix: true
